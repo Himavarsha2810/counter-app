@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f9;
+    }
+    .counter {
+      font-size: 2rem;
+      margin: 50px 0;
+    }
+    button {
+      font-size: 1rem;
+      margin: 0 5px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+     
+    }
+    .increase {
+      background-color: black;
+      color: white;
+    }
+    .decrease {
+      background-color: black;
+      color: white;
+    }
+    .reset {
+      background-color: #2196f3;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Counter App Using DOM</h1>
+  <div class="counter" id="counter">0</div>
+  <div>
+    <button class="decrease" id="decreaseButton">Decrease</button>
+    <button class="reset" id="resetButton">Reset</button>
+    <button class="increase" id="increaseButton">Increase</button>
+  </div>
+
+  <script>
+    let counterDisplay = document.getElementById('counter');
+    let decreaseBtn = document.getElementById('decreaseButton');
+    let resetBtn = document.getElementById('resetButton');
+    let increaseBtn = document.getElementById('increaseButton');
+
+    let counterValue = 0;
+
+    function updateCounter() {
+      counterDisplay.textContent = counterValue;
+    }
+
+    decreaseButton.onclick = () => {
+      counterValue--;
+      updateCounter();
+    };
+
+    resetButton.onclick = () => {
+      counterValue = 0;
+      updateCounter();
+    };
+
+    increaseButton.onclick = () => {
+      counterValue++;
+      updateCounter();
+    };
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>counter app</h1>
+    <div id="counter">0</div>
+    <button id="increment">+</button>
+    <button id="reset">reset</button>
+    <button id="decrement">-</button>
+    <script>
+      const counterElement = document.getElementById("counter");
+      const incrementButton = document.getElementById("increment");
+      const resetButton = document.getElementById("reset");
+      const decrementButton = document.getElementById("decrement");
+      let counter = 0;
+      function updatecounter() {
+        counterElement.textContent = counter;
+      }
+      incrementButton.onclick("click", () => {
+        counter++;
+        updatecounter();
+      });
+      resetButton.onclick("click", () => {
+        counter = 0;
+        updatecounter();
+      });
+      decrementButton.onclick("click", () => {
+        counter--;
+        updatecounter();
+      });
+    </script>
+  </body>
+</html> -->
